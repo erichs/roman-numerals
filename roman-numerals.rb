@@ -11,8 +11,8 @@ class RomanNumerals
     end
   end
 
-  def meaning_of_life
-    42
+  def to_s
+    'I'*@input
   end
 end
 

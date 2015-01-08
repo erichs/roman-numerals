@@ -16,8 +16,8 @@ describe RomanNumerals do
   end
 
   it "decodes 1 thru 3" do
-    must_equal(RomanNumerals.new(1), "I")
-    must_equal(RomanNumerals.new(2), "II")
-    must_equal(RomanNumerals.new(3), "III")
+    RomanNumerals.new(1).to_s.must_equal("I")
+    RomanNumerals.new(2).to_s.must_equal("II")
+    RomanNumerals.new(3).to_s.must_equal("III")
   end
 end
