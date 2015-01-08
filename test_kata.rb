@@ -28,4 +28,10 @@ describe RomanNumerals do
   it "decodes 4" do
     RomanNumerals.new(4).to_s.must_equal("IV")
   end
+
+  it "decodes 6 thru 8" do
+    RomanNumerals.new(6).to_s.must_equal("VI")
+    RomanNumerals.new(7).to_s.must_equal("VII")
+    RomanNumerals.new(8).to_s.must_equal("VIII")
+  end
 end
