@@ -20,4 +20,8 @@ describe RomanNumerals do
     RomanNumerals.new(2).to_s.must_equal("II")
     RomanNumerals.new(3).to_s.must_equal("III")
   end
+
+  it 'decodes 5' do
+    RomanNumerals.new(5).to_s.must_equal("V")
+  end
 end
