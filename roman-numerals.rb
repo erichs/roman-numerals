@@ -14,6 +14,10 @@ class RomanNumerals
         value += "X"
         @input -= 10
       end
+      if @input == 9
+        value += "IX"
+        @input -= 9
+      end
       if @input / 5 == 1
         value += "V"
         @input -= 5
