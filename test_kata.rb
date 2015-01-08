@@ -14,4 +14,10 @@ describe RomanNumerals do
       roman_numeral = RomanNumerals.new( 'CHEESE' )
     }
   end
+
+  it "decodes 1 thru 3" do
+    must_equal(RomanNumerals.new(1), "I")
+    must_equal(RomanNumerals.new(2), "II")
+    must_equal(RomanNumerals.new(3), "III")
+  end
 end
