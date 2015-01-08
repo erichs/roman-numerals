@@ -38,4 +38,8 @@ describe RomanNumerals do
   it "decodes 10" do
     RomanNumerals.new(10).to_s.must_equal("X")
   end
+
+  it "decodes 9" do
+    RomanNumerals.new(9).to_s.must_equal("IX")
+  end
 end
