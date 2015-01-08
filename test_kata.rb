@@ -10,7 +10,7 @@ require './roman-numerals'
 
 describe RomanNumerals do
   it "throws exception if passed a string" do
-    assert_raises(InvalidInput) {
+    assert_raises(ArgumentError) {
       roman_numeral = RomanNumerals.new( 'CHEESE' )
     }
   end

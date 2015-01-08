@@ -4,11 +4,7 @@ require 'colorize'
 
 class RomanNumerals
   def initialize(numeral)
-    begin
-      @input = Integer(numeral)
-    rescue ArgumentError
-      raise InvalidInput
-    end
+    @input = Integer(numeral)
   end
 
   def to_s
