@@ -42,4 +42,20 @@ describe RomanNumerals do
   it "decodes 9" do
     RomanNumerals.new(9).to_s.must_equal("IX")
   end
+
+  it "decodes 11 thru 19" do
+    RomanNumerals.new(11).to_s.must_equal("XI")
+    RomanNumerals.new(12).to_s.must_equal("XII")
+    RomanNumerals.new(13).to_s.must_equal("XIII")
+    RomanNumerals.new(14).to_s.must_equal("XIV")
+    RomanNumerals.new(15).to_s.must_equal("XV")
+    RomanNumerals.new(16).to_s.must_equal("XVI")
+    RomanNumerals.new(17).to_s.must_equal("XVII")
+    RomanNumerals.new(18).to_s.must_equal("XVIII")
+    RomanNumerals.new(19).to_s.must_equal("XIX")
+  end
+
+  it "decodes 20" do
+    RomanNumerals.new(20).to_s.must_equal("XX")
+  end
 end
