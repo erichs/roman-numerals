@@ -13,7 +13,7 @@ Display Output:
 e.g.
 
 ```shell
-./roman-numerals.rb XXX
+./roman-numerals.rb 30
 ```
 
 
