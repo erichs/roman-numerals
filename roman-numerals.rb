@@ -3,6 +3,14 @@
 require 'colorize'
 
 class RomanNumerals
+  def initialize(numeral)
+    begin
+      @input = Integer(numeral)
+    rescue ArgumentError
+      raise InvalidInput
+    end
+  end
+
   def meaning_of_life
     42
   end
