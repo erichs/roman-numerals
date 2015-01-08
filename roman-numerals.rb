@@ -8,9 +8,21 @@ class RomanNumerals
   end
 
   def to_s
-    value = "I" * @input
-    value = "IV" if @input == 4
-    value = "V"  if @input == 5
+    value = ""
+    while @input > 0
+      if @input / 5 == 1
+        value += "V"
+        @input -= 5
+      end
+      if @input == 4
+        value += "IV"
+        @input -= 4
+      end
+      @input.times do
+        value += "I"
+        @input -= 1
+      end
+    end
     value
   end
 end
