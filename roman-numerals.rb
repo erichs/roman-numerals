@@ -8,7 +8,7 @@ class RomanNumerals
   end
 
   def to_s
-    return "V" if @input / 5 == 1
+    return "V" if @input == 5
     'I'*@input
   end
 end
