@@ -34,4 +34,8 @@ describe RomanNumerals do
     RomanNumerals.new(7).to_s.must_equal("VII")
     RomanNumerals.new(8).to_s.must_equal("VIII")
   end
+
+  it "decodes 10" do
+    RomanNumerals.new(10).to_s.must_equal("X")
+  end
 end
