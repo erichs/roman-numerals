@@ -74,4 +74,8 @@ describe RomanNumerals do
   it "decodes 50" do
     RomanNumerals.new(50).to_s.must_equal("L")
   end
+
+  it "decodes 90" do
+    RomanNumerals.new(90).to_s.must_equal("XC")
+  end
 end
