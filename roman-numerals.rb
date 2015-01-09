@@ -10,7 +10,7 @@ class RomanNumerals
   def to_s
     value = ""
     while @input > 0
-      if @input / 10 == 1
+      if @input >= 10
         value += "X"
         @input -= 10
       end
@@ -22,13 +22,15 @@ class RomanNumerals
         value += "V"
         @input -= 5
       end
-      if @input == 4
-        value += "IV"
-        @input -= 4
-      end
-      @input.times do
-        value += "I"
-        @input -= 1
+      if @input < 5
+        if @input == 4
+          value += "IV"
+          @input -= 4
+        end
+        @input.times do
+          value += "I"
+          @input -= 1
+        end
       end
     end
     value
