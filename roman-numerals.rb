@@ -10,6 +10,10 @@ class RomanNumerals
   def to_s
     value = ""
     while @input > 0
+      if @input / 90 == 1
+        value += "XC"
+        @input -= 90
+      end
       if @input / 50 == 1
         value += "L"
         @input -= 50
