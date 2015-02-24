@@ -129,4 +129,10 @@ describe RomanNumerals do
     RomanNumerals.new(300).to_s.must_equal("CCC")
     RomanNumerals.new(400).to_s.must_equal("CD")
   end
+
+  it "decodes 500, 600, and 700" do
+    RomanNumerals.new(500).to_s.must_equal("D")
+    RomanNumerals.new(600).to_s.must_equal("DC")
+    RomanNumerals.new(700).to_s.must_equal("DCC")
+  end
 end
