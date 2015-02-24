@@ -1,6 +1,7 @@
 #!/usr/bin/env bundle exec ruby
 
 require 'colorize'
+require 'timeout'
 
 class RomanNumerals
    TABLET =  { 90 => 'XC',
@@ -20,12 +21,14 @@ class RomanNumerals
   end
 
   def to_s
-    while @input > 0
-      TABLET.each do |num, val|
-        append_value num, val
-        prev = num
+    Timeout::timeout(3) {
+      while @input > 0
+        TABLET.each do |num, val|
+          append_value num, val
+          prev = num
+        end
       end
-    end
+    }
     @value
   end
 

@@ -105,4 +105,22 @@ describe RomanNumerals do
   it "decodes 90" do
     RomanNumerals.new(90).to_s.must_equal("XC")
   end
+
+  it "decodes 100" do
+    RomanNumerals.new(100).to_s.must_equal("C")
+  end
+
+  it "decodes 101 thru 111" do
+    RomanNumerals.new(101).to_s.must_equal("CI")
+    RomanNumerals.new(102).to_s.must_equal("CII")
+    RomanNumerals.new(103).to_s.must_equal("CIII")
+    RomanNumerals.new(104).to_s.must_equal("CIV")
+    RomanNumerals.new(105).to_s.must_equal("CV")
+    RomanNumerals.new(106).to_s.must_equal("CVI")
+    RomanNumerals.new(107).to_s.must_equal("CVII")
+    RomanNumerals.new(108).to_s.must_equal("CVIII")
+    RomanNumerals.new(109).to_s.must_equal("CIX")
+    RomanNumerals.new(110).to_s.must_equal("CX")
+    RomanNumerals.new(111).to_s.must_equal("CXI")
+  end
 end
