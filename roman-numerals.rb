@@ -3,21 +3,29 @@
 require 'colorize'
 
 class RomanNumerals
+   TABLET =  { 90 => 'XC',
+               50 => 'L',
+               40 => 'XL',
+               10 => 'X',
+                9 => 'IX',
+                5 => 'V',
+                4 => 'IV',
+                1 => 'I'
+    }
+
   def initialize(numeral)
     @input = Integer(numeral)
     @value = ""
+
   end
 
   def to_s
     while @input > 0
-      append_value 90, 100, 'XC'
-      append_value 50, 90, 'L'
-      append_value 40, 50, 'XL'
-      append_value 10, 40, 'X'
-      append_value 9, 10, 'IX'
-      append_value 5, 9, 'V'
-      append_value 4, 5, 'IV'
-      append_value 1, 4, 'I'
+      prev=100
+      TABLET.each do |num, val|
+        append_value num, prev, val
+        prev = num
+      end
     end
     @value
   end
