@@ -16,25 +16,25 @@ class RomanNumerals
   def initialize(numeral)
     @input = Integer(numeral)
     @value = ""
-
+    @prev  = 100
   end
 
   def to_s
     while @input > 0
-      prev=100
       TABLET.each do |num, val|
-        append_value num, prev, val
+        append_value num, val
         prev = num
       end
     end
     @value
   end
 
-  def append_value num, under_num, value
-    if @input >= num and @input < under_num
+  def append_value num, value
+    if @input >= num and @input < @prev
      @value += value
      @input -= num
     end
+    @prev = num
   end
 end
 
