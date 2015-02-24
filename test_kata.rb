@@ -75,6 +75,20 @@ describe RomanNumerals do
     RomanNumerals.new(50).to_s.must_equal("L")
   end
 
+
+  it "decodes 51 thru 60" do
+    RomanNumerals.new(51).to_s.must_equal("LI")
+    RomanNumerals.new(52).to_s.must_equal("LII")
+    RomanNumerals.new(53).to_s.must_equal("LIII")
+    RomanNumerals.new(54).to_s.must_equal("LIV")
+    RomanNumerals.new(55).to_s.must_equal("LV")
+    RomanNumerals.new(56).to_s.must_equal("LVI")
+    RomanNumerals.new(57).to_s.must_equal("LVII")
+    RomanNumerals.new(58).to_s.must_equal("LVIII")
+    RomanNumerals.new(59).to_s.must_equal("LIX")
+    RomanNumerals.new(60).to_s.must_equal("LX")
+  end
+
   it "decodes 90" do
     RomanNumerals.new(90).to_s.must_equal("XC")
   end

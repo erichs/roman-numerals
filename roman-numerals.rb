@@ -10,61 +10,21 @@ class RomanNumerals
 
   def to_s
     while @input > 0
-      append_value_XC
-      append_value_L
-      append_value_X
-      append_value_IX
-      append_value_V
-      append_value_IV_and_I
+      append_value 90, 100, 'XC'
+      append_value 50, 90, 'L'
+      append_value 10, 50, 'X'
+      append_value 9, 10, 'IX'
+      append_value 5, 9, 'V'
+      append_value 4, 5, 'IV'
+      append_value 1, 4, 'I'
     end
     @value
   end
 
-  def append_value_XC
-    if @input / 90 == 1
-     @value += "XC"
-     @input -= 90
-    end
-  end
-
-  def append_value_L
-    if @input / 50 == 1
-      @value += "L"
-      @input -= 50
-    end
-  end
-
-  def append_value_X
-    if @input >= 10
-      @value += "X"
-      @input -= 10
-    end
-  end
-
-  def append_value_IX
-    if @input == 9
-      @value += "IX"
-      @input -= 9
-    end
-  end
-
-  def append_value_V
-    if @input / 5 == 1
-      @value += "V"
-      @input -= 5
-    end
-  end
-
-  def append_value_IV_and_I
-    if @input < 5
-      if @input == 4
-        @value += "IV"
-        @input -= 4
-      end
-      @input.times do
-        @value += "I"
-        @input -= 1
-      end
+  def append_value num, under_num, value
+    if @input >= num and @input < under_num
+     @value += value
+     @input -= num
     end
   end
 end
