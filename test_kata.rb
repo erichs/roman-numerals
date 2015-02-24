@@ -123,4 +123,10 @@ describe RomanNumerals do
     RomanNumerals.new(110).to_s.must_equal("CX")
     RomanNumerals.new(111).to_s.must_equal("CXI")
   end
+
+  it "decodes 200, 300, and 400" do
+    RomanNumerals.new(200).to_s.must_equal("CC")
+    RomanNumerals.new(300).to_s.must_equal("CCC")
+    RomanNumerals.new(400).to_s.must_equal("CD")
+  end
 end
