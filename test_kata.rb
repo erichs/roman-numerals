@@ -71,6 +71,19 @@ describe RomanNumerals do
     RomanNumerals.new(29).to_s.must_equal("XXIX")
   end
 
+ it "decodes 31 thru 40" do
+    RomanNumerals.new(31).to_s.must_equal("XXXI")
+    RomanNumerals.new(32).to_s.must_equal("XXXII")
+    RomanNumerals.new(33).to_s.must_equal("XXXIII")
+    RomanNumerals.new(34).to_s.must_equal("XXXIV")
+    RomanNumerals.new(35).to_s.must_equal("XXXV")
+    RomanNumerals.new(36).to_s.must_equal("XXXVI")
+    RomanNumerals.new(37).to_s.must_equal("XXXVII")
+    RomanNumerals.new(38).to_s.must_equal("XXXVIII")
+    RomanNumerals.new(39).to_s.must_equal("XXXIX")
+    RomanNumerals.new(40).to_s.must_equal("XL")
+  end
+
   it "decodes 50" do
     RomanNumerals.new(50).to_s.must_equal("L")
   end

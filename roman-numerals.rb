@@ -12,7 +12,8 @@ class RomanNumerals
     while @input > 0
       append_value 90, 100, 'XC'
       append_value 50, 90, 'L'
-      append_value 10, 50, 'X'
+      append_value 40, 50, 'XL'
+      append_value 10, 40, 'X'
       append_value 9, 10, 'IX'
       append_value 5, 9, 'V'
       append_value 4, 5, 'IV'
@@ -28,8 +29,6 @@ class RomanNumerals
     end
   end
 end
-
-class InvalidInput < Exception; end
 
 if __FILE__ == $0
   # this will only run if the script was the main, not load'd or require'd
