@@ -4,7 +4,7 @@ require 'colorize'
 require 'timeout'
 
 class RomanNumerals
-   TABLET = {
+  TABLET = {
                1000 => 'M',
                 900 => 'CM',
                 500 => 'D',
@@ -23,15 +23,14 @@ class RomanNumerals
   def initialize(numeral)
     @input = Integer(numeral)
     @value = ""
-    @prev  = 10000
   end
 
   def to_s
     Timeout::timeout(3) {
       while @input > 0
+        @previous_table_entry = Float::INFINITY
         TABLET.each do |num, val|
           append_value num, val
-          prev = num
         end
       end
     }
@@ -39,11 +38,11 @@ class RomanNumerals
   end
 
   def append_value num, value
-    if @input >= num and @input < @prev
-     @value += value
-     @input -= num
+    if @input >= num and @input < @previous_table_entry
+      @previous_table_entry = num
+      @value += value
+      @input -= num
     end
-    @prev = num
   end
 end
 

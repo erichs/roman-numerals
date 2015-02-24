@@ -141,4 +141,11 @@ describe RomanNumerals do
     RomanNumerals.new(900).to_s.must_equal("CM")
     RomanNumerals.new(1000).to_s.must_equal("M")
   end
+
+  it "decodes 2000, 3000, 4000, and 5000" do
+    RomanNumerals.new(2000).to_s.must_equal("MM")
+    RomanNumerals.new(3000).to_s.must_equal("MMM")
+    RomanNumerals.new(4000).to_s.must_equal("MMMM")
+    RomanNumerals.new(5000).to_s.must_equal("MMMMM")
+  end
 end
