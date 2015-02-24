@@ -1,7 +1,7 @@
 Tests:
 ======
 
-To run tests, just type 'rake'
+To run tests, just type 'rake'. No, rly.
 
 
 Display Output:
