@@ -135,4 +135,10 @@ describe RomanNumerals do
     RomanNumerals.new(600).to_s.must_equal("DC")
     RomanNumerals.new(700).to_s.must_equal("DCC")
   end
+
+
+  it "decodes 900 and 1000" do
+    RomanNumerals.new(900).to_s.must_equal("CM")
+    RomanNumerals.new(1000).to_s.must_equal("M")
+  end
 end
