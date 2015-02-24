@@ -4,7 +4,8 @@ require 'colorize'
 require 'timeout'
 
 class RomanNumerals
-   TABLET =  { 90 => 'XC',
+   TABLET = { 100 => 'C',
+               90 => 'XC',
                50 => 'L',
                40 => 'XL',
                10 => 'X',
@@ -17,7 +18,7 @@ class RomanNumerals
   def initialize(numeral)
     @input = Integer(numeral)
     @value = ""
-    @prev  = 100
+    @prev  = 1000
   end
 
   def to_s
