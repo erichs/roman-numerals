@@ -4,7 +4,7 @@ require 'colorize'
 require 'timeout'
 
 class RomanNumerals
-   TABLET = {
+   TABLET = { 500 => 'D',
               400 => 'CD',
               100 => 'C',
                90 => 'XC',
